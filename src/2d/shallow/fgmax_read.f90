@@ -49,13 +49,13 @@ subroutine fgmax_read(fgmax_unit,ifg)
     integer, intent(in) :: ifg, fgmax_unit
     
     ! local
-    character(150) :: fname
+    character(len=1024) :: fname
     integer :: k,i,j,point_style,n12,n23
     real(kind=8) :: x1,x2,y1,y2,yj
     real(kind=8) :: x3,x4,y3,y4,x14,y14,x23,y23,xi,eta
     type(fgrid), pointer :: fg
     logical :: foundFile
-    character(len=150) :: fname2
+    character(len=1024) :: fname2
     integer omp_get_max_threads, maxthreads
     integer :: clock_start, clock_finish, clock_rate
     real(kind=8), allocatable :: fg_row(:)
